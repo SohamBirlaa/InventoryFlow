@@ -41,5 +41,5 @@ def health_check():
     return {
         "status":"ok",
         "app":settings.APP_NAME,
-        "version":settings.App_VERSION,
+        "version":settings.APP_VERSION,
     }
