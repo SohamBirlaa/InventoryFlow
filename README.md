@@ -87,6 +87,18 @@ When running the stack via Docker Compose, the services are mapped to:
 
 ---
 
+## Live Deployment
+
+- **Frontend**: https://inventory-flow-blue.vercel.app
+
+- **Backend**: https://inventoryflow-backend-jfct.onrender.com
+
+- **API Docs**: https://inventoryflow-backend-jfct.onrender.com/docs
+
+- **Docker Hub**: https://hub.docker.com/r/sohambirlaa/inventoryflow-backend
+
+- **GitHub**: https://github.com/SohamBirlaa/InventoryFlow
+
 ## Local Setup (Without Docker)
 
 ### Prerequisites
@@ -114,6 +126,8 @@ When running the stack via Docker Compose, the services are mapped to:
 3. Install dependencies:
    ```bash
    pip install -e .
+   uv sync
+   uv run uvicorn app.main:app --reload
    ```
 4. Run the FastAPI development server:
    ```bash
