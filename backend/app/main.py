@@ -15,7 +15,7 @@ from app.routers.dashboard import router as dashboard_router
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    tittle=settings.APP_NAME,
+    title=settings.APP_NAME,
     version=settings.APP_VERSION,
 )
 
@@ -25,7 +25,9 @@ app.add_middleware(
         settings.FRONTEND_URL,
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://inventory-flow-blue.vercel.app",
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
